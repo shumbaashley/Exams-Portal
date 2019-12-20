@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>Welcome <h2>{{name}} {{surname}}</h2></h1>
+    <hr>
+    <p>Your results are: </p>
+    <ul>
+        {% for exam in exams: %}
+            <li>{{exam[0]}} = {{exam[1]}} </li>
+        {% endfor %}
+    </ul>
+    <p>Go Back to <a href="{{ url_for('index') }}">Home Page</a></p>
+{% endblock %}
